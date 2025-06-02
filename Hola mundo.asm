@@ -4,8 +4,14 @@ hola: .asciiz "Hola mundo"
 
 .text
 
-li $v0, 4
+main:
 
-la $a0, hola
+  li $v0, 4
 
-syscall 
+  la $a0, hola
+
+  syscall 
+
+  li $v0, 10
+
+  syscall
